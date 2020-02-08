@@ -1,0 +1,579 @@
+@charset "UTF-8";
+
+/* 共通部分 ===================*/
+html {
+    font-size: 100%
+}
+body {
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+    /*line-height: 1.7;*/
+    /*color: #432;*/
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+.logo {
+    width: 210px;
+    margin-top: 14px;
+}
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom:12px;
+}
+
+/* ↓ ロゴ */
+header h1 {
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 1.1;
+    margin-top: 20px;
+}
+header h1 a{
+    color: #918F89;
+}
+.page-header span {
+    display: block;
+}
+/* ↑ ロゴ */
+
+
+
+
+
+
+/* 各セクションのタイトル */
+h3 {
+    text-align: center;
+    font: normal normal normal 25px/53px 'Noto Sans JP';
+    letter-spacing: 2.5px;
+    color: #3B3B3B;
+    opacity: 1;
+    font-size: 25px;
+}
+
+.main-nav {
+    display: flex;
+    margin-top: 34px;
+    list-style: none;
+    text-align: left;
+    font: normal normal normal 16px/22px 'Noto Sans JP';
+    letter-spacing: 0;
+    color: #272727;
+}
+.main-nav li {
+    margin-left: 36px;
+}
+.main-nav a {
+    color: #432;
+    padding-bottom:10px;
+    opacity: 0.5;
+}
+.main-nav a:hover {
+    color: #3E3E3E;
+    border-bottom: 2px solid #3E3E3E;
+    opacity: 1;
+}
+.main-nav-current a{
+    border-bottom: 2px solid #3E3E3E;
+    opacity: 1;
+}
+
+
+
+.wrapper {
+    max-width: 1140px;
+    margin:0 auto; /* ボックスを画面中央に配置*/
+    /*padding: 0 4%;*/ /*スマホ向け 余白の指定*/
+}
+.home-content {
+    text-align: center;
+    margin-top: 10%;
+}
+.home-content p {
+    font-size: 1.125rem;
+    margin: 10px 0 42px;
+}
+
+
+
+
+
+
+.bg-text{
+    font-weight: lighter;
+    font-size: 60px;
+    line-height: 82px;
+    font-family: 'Noto Sans';
+    /*font: Regular 60px/82px Noto Sans;*/
+    color: #918F89;
+    width: 738px;
+    height: 136px;
+    top:278px;
+    text-align: left;
+    padding:31px 60px 23px 88px;
+    position: relative;
+    background-color: #ffff;
+    letter-spacing: 3px;
+    opacity: 0.8;
+}
+
+
+
+
+/* 見出し */
+.page-title {
+    font-size: 5rem;
+    font-family: 'Philosopher', sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+
+
+/* 大きな背面画像 */
+.big-bg {
+    background-size: cover; /* 背面画像の縦横の比率を保ったまま画面いっぱいに広げる */
+    background-position: center top;
+    background-position: no-repeat;
+}
+#home {
+    background-image: url(../images/AdobeStock_199226712.png), linear-gradient(#c9ffbf, #ffafbd);
+    /*background-blend-mode: luminosity;*/
+    min-height: 100vh; /* 画面の表示領域の高さいっぱいに画像を広げる */
+}
+#home .page-title {
+    text-transform: none; /* テキストの大文字、小文字、全角の指定　*/
+}
+
+/* News =========================== */
+#news {
+    /*background-image: url(../images/news-bg.jpg);*/
+    /*height: 270px;
+    margin-bottom: 40px;*/
+}
+#news .page-title {
+    text-align: center;
+}
+
+
+/* コンテンツ横並び Flexboxを利用する =============================  */
+.news-contents {
+    display: flex;
+    justify-content: space-between;
+    margin: 142px 0px 200px 5%;
+}
+/* 記事 */
+article {
+    width: 48%;
+}
+/* サイドバー */
+aside {
+    width: 48%;
+}
+
+aside p {
+    text-align: left;
+    font: normal normal normal 14px/35px 'Noto Sans JP';
+    letter-spacing: 0.36px;
+    color: #3B3B3B;
+    opacity: 1;
+    line-height: 30px;
+}
+aside h3 {
+    margin: 200px 0 40px 0;
+}
+/* /コンテンツ横並び Flexbox =============================  */
+
+
+.item-container {
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 39px;
+}
+
+.view-more {
+    text-align: center;
+    margin-bottom: 221px;
+    font: normal normal normal 21px/53px Noto Sans;
+    letter-spacing: 1.05px;
+    color: #3B3B3B;
+}
+
+
+.form-contact {
+    margin-bottom:190px;
+}
+
+form div {
+    text-align: center;
+    margin-bottom: 30px;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    border: 0.5px solid #707070;
+    border-radius: 11px;
+    opacity: 0.6;
+    height: 35px;    
+    padding: 10px;
+    font-size: 1rem;
+}
+input[type="text"],
+input[type="email"] {
+    width: 463px;
+    /*max-width: 240px;*/
+}
+textarea {
+    width: 463px;
+    /*max-width: 480px;*/
+    height: 156px;
+}
+input[type="submit"] {
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+}
+/* ボタン */
+.button {
+    background: #707070 0% 0% no-repeat padding-box;
+    font: normal normal normal 15px/53px Noto Sans;
+    letter-spacing: 0.75px;
+    color: #FFFFFF;
+    width: 111px;
+    height: 35px;
+    border-radius: 25px;
+    padding: 10px;
+}
+.button:hover {
+    background: #707070d8;
+}
+.button-wrapper {
+    text-align: center;
+}
+
+/*
+コンテンツ横並び Flexboxを利用しない。
+親要素にposition:relative、その子要素にpositon:absoluteを使う。
+子要素をtop, bottom, right, left で配置位置を決める。
+*/
+/* 親要素 */
+.post-info {
+    position: relative;
+    padding-top: 4px;
+    margin-bottom: 40px;
+}
+/* 子要素 */
+.post-date {
+    position: absolute;
+    background: #0bd;
+    border-radius: 50%;
+    color: #fff;
+    width: 100px;
+    height: 100px;
+    font-size: 1.625rem;
+    text-align: center;
+    top:0;
+    padding-top: 10px;
+}
+/* /コンテンツ横並び Flexboxを利用しない。*/
+
+.post-date span {
+    font-size: 1rem;
+    border-top: 1px rgba(255, 255, 255, .5) solid;
+    padding-top: 6px;
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+}
+.post-title {
+    font-family: "Yu Mincho", "YuMincho", serif;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.hstyle {
+    text-align: center;
+    margin-bottom: 246px;
+}
+h3.section-title {
+    margin-bottom: 50px;
+}
+h3.contact-section-title {
+    margin-bottom: 60px;
+}
+
+
+/* <div>などを使わなくても位置指定できる */
+.post-title,
+.post-cat {
+    margin-left: 120px;
+}
+article img {
+    margin-bottom: 20px;
+}
+article p {
+    margin-bottom: 1rem;
+}
+.sub-title {
+    font-size: 1.375rem;
+    padding: 0 8px 8px;
+    border-bottom: 2px #0bd solid;
+    font-weight: normal;
+}
+.sub-menu {
+    margin-bottom: 60px;
+    list-style: none;
+}
+.sub-menu li {
+    border-bottom: 1px #ddd solid;
+}
+.sub-menu a {
+    color: #432;
+    padding: 10px;
+    display: block;
+}
+.sub-menu a:hover {
+    color: #0bd;
+}
+
+
+
+
+
+footer {
+    background: #918F89;
+    padding: 90px 220px 0 220px;
+}
+
+/* ↓ フッターのロゴ */
+footer h1 {
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 1.1;
+    margin-top: 20px;
+}
+footer h1 a{
+    color: #ffffff;
+}
+/* ↑ フッターのロゴ */
+
+/* フッターのナビ */
+footer .main-nav {
+    display: flex;
+    margin-top: 34px;
+    list-style: none;
+    text-align: left;
+    font: normal normal normal 16px/22px 'Noto Sans JP';
+    letter-spacing: 0;
+    color: #ffffff;
+}
+footer .main-nav li {
+    margin-left: 36px;
+}
+footer .main-nav a {
+    color: #ffffff;
+    padding-bottom:initial;
+    opacity: 0.5;
+}
+footer .main-nav a:hover {
+    color: #ffffff;
+    border-bottom: initial;
+    opacity: 1;
+}
+footer .main-nav-current a{
+    border-bottom: initial;
+    opacity: 1;
+}
+footer nav {
+    margin-bottom: 60px;
+}
+footer p {
+    text-align: center;
+    font-size: 10px;
+    padding-bottom:35px;
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+    .wrapper {
+        padding: 0 4%; /*スマホ向け 余白の指定*/
+    }
+    .page-title {
+        font-size: 2.5rem;
+    }
+    /* Header */
+    .page-header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-nav {
+        font: size 1rem;
+        margin-top: 10px;
+    }
+    .main-nav li {
+        margin: 0 20px;
+    }
+    /* Home */
+    .home-content {
+        margin-top: 20%;
+    }
+
+    /* News */
+    .news-contents {
+        flex-direction: column-reverse;
+        margin: 72px 0px 50px 0;
+    }
+
+
+
+    /* 画面横幅いっぱいに広げる */
+    article,
+    aside {
+        width: 100%;
+    }
+    #news .page-title {
+        margin-top: 30px;
+    }
+    .news-contents article {
+        margin-top: 30px;
+    }
+    aside {
+        text-align: center;
+        font: normal normal normal 14px/35px 'Noto Sans JP';
+        letter-spacing: 0.42px;
+        color: #3B3B3B;
+    }
+    aside h3 {
+        margin:0;
+    }
+    aside p {        
+        text-align: center;
+        white-space: pre-line;
+    }
+
+
+    
+
+    
+
+    .bg-text{
+        font-weight: initial;
+        font-size: initial;
+        line-height: initial;
+        font-family: initial;
+        /*font: Regular 60px/82px Noto Sans;*/
+        color: initial;
+        width: initial;
+        height: initial;
+        top:initial;
+        text-align: initial;
+        padding:initial;
+        position: initial;
+        background-color: initial;
+        letter-spacing: initial;
+        opacity: initial;
+    }
+    
+
+    
+    .bg-text {
+        font-weight: lighter;
+        font-size: 39px;
+        line-height: 260%;
+        font-family: 'Noto Sans';
+        /*font: Regular 39px/87px Noto Sans;*/
+        color: #918F89;
+        /*height: 136px;*/
+        top:60px;
+        text-align: left;
+        position: relative;
+        opacity: 0.8;
+        letter-spacing: 1.95px;
+        white-space: pre-line;
+    }
+
+    .bg-text span {
+        font-weight: 100px;
+        padding:15px 15px 15px 54px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+    }
+
+
+    .item-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .item {
+        margin-bottom: 30px;
+
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        width: 80%;
+    }
+    textarea {
+        width: 80%;
+    }
+    footer {
+        padding: 60px 0;
+    }
+    footer .page-header {
+        height: 40px;
+        padding-bottom:0;
+    }
+    .page-header h1 {
+        margin: 0;
+    }
+    footer p {
+        padding: 0;
+    }
+    footer .main-nav{
+        display: none;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    .post-date {
+        width: 70px;
+        height: 70px;
+        font-size: 1rem;
+    }
+    .post-date span {
+        font-size: 0.875rem;
+        padding-top: 2px;
+    }
+    .post-title {
+        font-size: 1.375rem;
+    }
+    .post-cat {
+        font-size: 0.875rem;
+    }
+    .post-title,
+    .post-cat {
+        margin-left: 80px;
+    }
+}
