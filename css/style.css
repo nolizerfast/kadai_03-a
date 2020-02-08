@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-/* 共通部分 ===================*/
 html {
     font-size: 100%
 }
@@ -25,7 +24,6 @@ img {
     padding-bottom:12px;
 }
 
-/* ↓ ロゴ */
 header h1 {
     text-align: center;
     font-size: 16px;
@@ -39,12 +37,6 @@ header h1 a{
 .page-header span {
     display: block;
 }
-/* ↑ ロゴ */
-
-
-
-
-
 
 /* 各セクションのタイトル */
 h3 {
@@ -52,10 +44,8 @@ h3 {
     font: normal normal normal 25px/53px 'Noto Sans JP';
     letter-spacing: 2.5px;
     color: #3B3B3B;
-    opacity: 1;
     font-size: 25px;
 }
-
 .main-nav {
     display: flex;
     margin-top: 34px;
@@ -82,28 +72,10 @@ h3 {
     border-bottom: 2px solid #3E3E3E;
     opacity: 1;
 }
-
-
-
 .wrapper {
     max-width: 1140px;
     margin:0 auto; /* ボックスを画面中央に配置*/
-    /*padding: 0 4%;*/ /*スマホ向け 余白の指定*/
 }
-.home-content {
-    text-align: center;
-    margin-top: 10%;
-}
-.home-content p {
-    font-size: 1.125rem;
-    margin: 10px 0 42px;
-}
-
-
-
-
-
-
 .bg-text{
     font-weight: lighter;
     font-size: 60px;
@@ -121,21 +93,6 @@ h3 {
     letter-spacing: 3px;
     opacity: 0.8;
 }
-
-
-
-
-/* 見出し */
-.page-title {
-    font-size: 5rem;
-    font-family: 'Philosopher', sans-serif;
-    text-transform: uppercase;
-    font-weight: normal;
-}
-
-
-
-/* 大きな背面画像 */
 .big-bg {
     background-size: cover; /* 背面画像の縦横の比率を保ったまま画面いっぱいに広げる */
     background-position: center top;
@@ -143,40 +100,28 @@ h3 {
 }
 #home {
     background-image: url(../images/AdobeStock_199226712.png), linear-gradient(#c9ffbf, #ffafbd);
-    /*background-blend-mode: luminosity;*/
     min-height: 100vh; /* 画面の表示領域の高さいっぱいに画像を広げる */
 }
 #home .page-title {
     text-transform: none; /* テキストの大文字、小文字、全角の指定　*/
 }
 
-/* News =========================== */
-#news {
-    /*background-image: url(../images/news-bg.jpg);*/
-    /*height: 270px;
-    margin-bottom: 40px;*/
-}
 #news .page-title {
     text-align: center;
 }
-
-
 /* コンテンツ横並び Flexboxを利用する =============================  */
-.news-contents {
+.main-message-w{
     display: flex;
     justify-content: space-between;
     margin: 142px 0px 200px 5%;
 }
-/* 記事 */
-article {
+.main-message-left {
     width: 48%;
 }
-/* サイドバー */
-aside {
+.main-message-right {
     width: 48%;
 }
-
-aside p {
+.main-message-right p {
     text-align: left;
     font: normal normal normal 14px/35px 'Noto Sans JP';
     letter-spacing: 0.36px;
@@ -184,11 +129,11 @@ aside p {
     opacity: 1;
     line-height: 30px;
 }
-aside h3 {
+.main-message-right h3 {
     margin: 200px 0 40px 0;
+    text-align: unset;
 }
 /* /コンテンツ横並び Flexbox =============================  */
-
 
 .item-container {
     display:flex;
@@ -203,12 +148,9 @@ aside h3 {
     letter-spacing: 1.05px;
     color: #3B3B3B;
 }
-
-
 .form-contact {
     margin-bottom:190px;
 }
-
 form div {
     text-align: center;
     margin-bottom: 30px;
@@ -226,11 +168,9 @@ textarea {
 input[type="text"],
 input[type="email"] {
     width: 463px;
-    /*max-width: 240px;*/
 }
 textarea {
     width: 463px;
-    /*max-width: 480px;*/
     height: 156px;
 }
 input[type="submit"] {
@@ -238,7 +178,6 @@ input[type="submit"] {
     cursor: pointer;
     line-height: 1;
 }
-/* ボタン */
 .button {
     background: #707070 0% 0% no-repeat padding-box;
     font: normal normal normal 15px/53px Noto Sans;
@@ -255,47 +194,6 @@ input[type="submit"] {
 .button-wrapper {
     text-align: center;
 }
-
-/*
-コンテンツ横並び Flexboxを利用しない。
-親要素にposition:relative、その子要素にpositon:absoluteを使う。
-子要素をtop, bottom, right, left で配置位置を決める。
-*/
-/* 親要素 */
-.post-info {
-    position: relative;
-    padding-top: 4px;
-    margin-bottom: 40px;
-}
-/* 子要素 */
-.post-date {
-    position: absolute;
-    background: #0bd;
-    border-radius: 50%;
-    color: #fff;
-    width: 100px;
-    height: 100px;
-    font-size: 1.625rem;
-    text-align: center;
-    top:0;
-    padding-top: 10px;
-}
-/* /コンテンツ横並び Flexboxを利用しない。*/
-
-.post-date span {
-    font-size: 1rem;
-    border-top: 1px rgba(255, 255, 255, .5) solid;
-    padding-top: 6px;
-    display: block;
-    width: 60%;
-    margin: 0 auto;
-}
-.post-title {
-    font-family: "Yu Mincho", "YuMincho", serif;
-    font-size: 2rem;
-    font-weight: normal;
-}
-
 .hstyle {
     text-align: center;
     margin-bottom: 246px;
@@ -305,19 +203,6 @@ h3.section-title {
 }
 h3.contact-section-title {
     margin-bottom: 60px;
-}
-
-
-/* <div>などを使わなくても位置指定できる */
-.post-title,
-.post-cat {
-    margin-left: 120px;
-}
-article img {
-    margin-bottom: 20px;
-}
-article p {
-    margin-bottom: 1rem;
 }
 .sub-title {
     font-size: 1.375rem;
@@ -340,16 +225,10 @@ article p {
 .sub-menu a:hover {
     color: #0bd;
 }
-
-
-
-
-
 footer {
     background: #918F89;
     padding: 90px 220px 0 220px;
 }
-
 /* ↓ フッターのロゴ */
 footer h1 {
     text-align: center;
@@ -402,12 +281,6 @@ footer p {
 
 
 
-
-
-
-
-
-
 @media (max-width: 600px) {
     .wrapper {
         padding: 0 4%; /*スマホ向け 余白の指定*/
@@ -415,7 +288,6 @@ footer p {
     .page-title {
         font-size: 2.5rem;
     }
-    /* Header */
     .page-header {
         flex-direction: column;
         align-items: center;
@@ -426,50 +298,36 @@ footer p {
     }
     .main-nav li {
         margin: 0 20px;
-    }
-    /* Home */
-    .home-content {
-        margin-top: 20%;
-    }
-
-    /* News */
-    .news-contents {
+    }    
+    .main-message-w{
         flex-direction: column-reverse;
         margin: 72px 0px 50px 0;
     }
-
-
-
     /* 画面横幅いっぱいに広げる */
-    article,
-    aside {
+    .main-message-left,
+    .main-message-right {
         width: 100%;
     }
     #news .page-title {
         margin-top: 30px;
     }
-    .news-contents article {
+    .main-messagearticle {
         margin-top: 30px;
     }
-    aside {
+    .main-message-right {
         text-align: center;
         font: normal normal normal 14px/35px 'Noto Sans JP';
         letter-spacing: 0.42px;
         color: #3B3B3B;
+        margin-bottom: 50px;
     }
-    aside h3 {
+    .main-message-right h3 {
         margin:0;
     }
-    aside p {        
+    .main-message-right p {        
         text-align: center;
         white-space: pre-line;
     }
-
-
-    
-
-    
-
     .bg-text{
         font-weight: initial;
         font-size: initial;
@@ -487,9 +345,6 @@ footer p {
         letter-spacing: initial;
         opacity: initial;
     }
-    
-
-    
     .bg-text {
         font-weight: lighter;
         font-size: 39px;
@@ -505,14 +360,11 @@ footer p {
         letter-spacing: 1.95px;
         white-space: pre-line;
     }
-
     .bg-text span {
         font-weight: 100px;
         padding:15px 15px 15px 54px;
         background: #FFFFFF 0% 0% no-repeat padding-box;
     }
-
-
     .item-container {
         flex-direction: column;
         text-align: center;
@@ -544,36 +396,5 @@ footer p {
     }
     footer .main-nav{
         display: none;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-    .post-date {
-        width: 70px;
-        height: 70px;
-        font-size: 1rem;
-    }
-    .post-date span {
-        font-size: 0.875rem;
-        padding-top: 2px;
-    }
-    .post-title {
-        font-size: 1.375rem;
-    }
-    .post-cat {
-        font-size: 0.875rem;
-    }
-    .post-title,
-    .post-cat {
-        margin-left: 80px;
     }
 }
